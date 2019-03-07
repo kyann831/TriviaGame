@@ -1,0 +1,19 @@
+body {
+    background-image: url("../images/stposter1.jpg")
+}
+
+.div1 {
+    background-color: lightgrey;
+    width: 300px;
+    border: 25px solid black;
+    padding: 25px;
+    margin: 25px;
+    margin-right: 20px;
+    margin-left: 450px;
+    width: 500px;
+    height: 500px;
+  }
+  
+  #startbutton {
+      float: right;
+  }
