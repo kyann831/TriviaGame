@@ -69,11 +69,13 @@ $(document).ready(function(){
    console.log(question.choice);
    if (question.answer === question.choice){
       answersRight++;
+      $("#correct").html(answersRight);
       pushQuestion(nextQuestion);
       document.getElementById("loser1").innerHTML="You're not a mouthbreather!";
    }
    else {
      answersWrong++;
+     $("#wrong").html(answersWrong);
      pushQuestion(nextQuestion);
      document.getElementById("loser1").innerHTML="Mouthbreather!";
   }
@@ -141,7 +143,6 @@ var game = {
 // 
 
       
-
 
 
 
