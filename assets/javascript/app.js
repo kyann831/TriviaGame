@@ -5,23 +5,28 @@ $(document).ready(function(){
       audioElement.play()
   });
 
+
+  $(".row").hide();
   var answersRight = 0;
   var answersWrong = 0; 
   var totalScore = 0;
    
+
   $('#startbutton').click(function() {
+    $("img").hide();
+    $(".row").show();
     function timer() {
       count=count-1;
       if (count <= 0) {
         clearInterval(counter);
-        document.getElementById("loser1").innerHTML="You lose!";
+        document.getElementById("loser1").innerHTML="You've been captured by the Demogorgon!";
       }
       document.getElementById("timer").innerHTML=count + " secs";
       return;
       //Do code for showing the number of seconds here
     }
 
-    var count=46;
+    var count=61;
     var counter=setInterval(timer, 1000); //1000 will  run it every 1 second 
   });
 
@@ -31,7 +36,9 @@ $(document).ready(function(){
     $("#a").html(stQuestion.answers[0]); 
     $("#b").html(stQuestion.answers[1]);  
     $("#c").html(stQuestion.answers[2]);
-    $("#d").html(stQuestion.answers[3]);    
+    $("#d").html(stQuestion.answers[3]);  
+    document.getElementById("form").reset();
+
   }
 
   // function pushQuestion() {
@@ -63,10 +70,15 @@ $(document).ready(function(){
    if (question.answer === question.choice){
       answersRight++;
       pushQuestion(nextQuestion);
+      document.getElementById("loser1").innerHTML="You're not a mouthbreather!";
    }
-   else{
+   else {
      answersWrong++;
      pushQuestion(nextQuestion);
+     document.getElementById("loser1").innerHTML="Mouthbreather!";
+  }
+  function finalScore(){
+
   }
     
  })
