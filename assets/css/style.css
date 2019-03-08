@@ -2,11 +2,12 @@ body {
     background-image: url("../images/stposter1.jpg")
 }
 
-.div1 {
-    background-color: lightgrey;
+.divst {
+    background-color: orangered;
     width: 300px;
     border: 25px solid black;
-    padding: 25px;
+    padding: 5px;
+    padding-left: 60px;
     margin: 25px;
     margin-right: 20px;
     margin-left: 450px;
@@ -17,3 +18,11 @@ body {
   #startbutton {
       float: right;
   }
+  .container {
+      padding-left: 5px;
+      
+  }
+
+input { 
+    margin-right: 10px;
+}
